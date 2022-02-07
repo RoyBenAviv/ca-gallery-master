@@ -6,6 +6,8 @@ function init() {
   renderProjects();
 }
 
+$('.submit-btn').click(onSubmitForm);
+
 function renderProjects() {
 
  const projects = getProjsForDisplay();
@@ -35,7 +37,6 @@ console.log(projects)
 function onOpenModal(projId) {
 
   var proj = getProjById(projId)
-  console.log(proj)
   const strHTML = `<h2>${proj.projName}</h2>
   <p class="item-intro text-muted">${proj.title}</p>
   <img class="img-fluid d-block mx-auto" src="img/portfolio/${proj.id}.jpg" alt="${proj.title}">
@@ -53,21 +54,12 @@ function onOpenModal(projId) {
 }
 
 
+function onSubmitForm(ev) {
+  ev.preventDefault();
 
-//             <!-- Project Details Go Here -->
-//             <h2>Project Name</h2>
-//             <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-//             <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
-//             <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
-//               blanditiis
-//               dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae
-//               cupiditate,
-//               maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-//             <ul class="list-inline">
-//               <li>Date: January 2017</li>
-//               <li>Client: Threads</li>
-//               <li>Category: Illustration</li>
-//             </ul>
-//             <button class="btn btn-primary" data-dismiss="modal" type="button">
-//               <i class="fa fa-times"></i>
-//               Close Project</button>
+  const subjectVal = $('#subject').val();
+  const messageVal = $('#message').val();
+
+  submitForm(subjectVal, messageVal)
+  
+}
