@@ -11,7 +11,6 @@ $('.submit-btn').click(onSubmitForm);
 function renderProjects() {
 
  const projects = getProjsForDisplay();
-console.log(projects)
  const strHtmls = projects.map(proj => {
     return `
     <div class="col-md-4 col-sm-6 portfolio-item">  
