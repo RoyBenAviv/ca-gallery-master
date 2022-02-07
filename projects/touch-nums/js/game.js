@@ -2,7 +2,7 @@
 
 const LEVELS = [16, 25, 36];
 const CORRECT_AUDIO = new Audio('');
-const VICTORY_AUDIO = new Audio('/sound/victory.mp3');
+const VICTORY_AUDIO = new Audio('sound/victory.mp3');
 var gNums;
 var gCounter = 1;
 var gCurrLevelIdx = 0;

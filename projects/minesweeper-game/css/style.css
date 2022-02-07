@@ -48,7 +48,7 @@ table {
     padding: 10px;
     box-shadow: 0px 0px 15px 5px #D16BA5;
     border-radius: 20%;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 .modal h3 {
     margin-top: 10px;
@@ -85,6 +85,7 @@ button:hover {
 }
 
 td {
+    /* padding: 10px; */
     background-color: #91f3ec;
     cursor: pointer;
     width: 40px;
@@ -92,6 +93,7 @@ td {
     opacity: 0.9;
     transition: 0.7s;
     line-height: 0;
+    /* color: rgb(255, 30, 30); */
     font-size: 40px;
 }
 

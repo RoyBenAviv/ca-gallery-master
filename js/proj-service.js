@@ -8,7 +8,8 @@ function _createProjs() {
         _createProj('book-shop', 'Book Store', 'Book store with CRUDL', '/projects/book-shop/index.html'),
         _createProj('minesweeper-game', 'Minesweeper Boom', 'The nostalgic Minesweeper game', '/projects/minesweeper-game/index.html'),
         _createProj('touch-nums', 'Touch the numbers', 'Touch the numbers fast as you can', '/projects/touch-nums/index.html'),
-        _createProj('in-picture', 'What is the flag?', 'Flag Quiz', '/projects/in-picture/index.html')
+        _createProj('in-picture', 'What is the flag?', 'Flag Quiz', '/projects/in-picture/index.html'),
+        _createProj('ball-board', 'Catch the balls!', 'Ball Board Game', '/projects/ball-board/index.html')
     ];
 }
 

@@ -48,11 +48,11 @@ function getRandomInt(min, max) {
 
 
 function explotionSound() {
-  var audio = new Audio('/sounds/explotion.wav');
+  var audio = new Audio('sounds/explotion.wav');
   audio.play();
 }
 
 function correctSound() {
-  var audio = new Audio('/sounds/correct.mp3');
+  var audio = new Audio('sounds/correct.mp3');
   audio.play();
 }
