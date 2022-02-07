@@ -19,11 +19,11 @@ console.log(projects)
                <i class="fa fa-plus fa-3x"></i>
          </div>
         </div>
-          <img class="img-fluid" src="img/portfolio/${proj.id}.jpg" alt="${proj.title}">
+          <img class="img-fluid img-proj" src="img/portfolio/${proj.id}.jpg" alt="${proj.title}">
        </a>
       <div class="portfolio-caption">
-        <h4>${proj.projName}</h4>
-        <p class="text-muted">${proj.title}</p>
+        <h4 class="text-light">${proj.projName}</h4>
+        <p class="text-light">${proj.title}</p>
       </div>
      </div>
   `;
@@ -39,10 +39,10 @@ function onOpenModal(projId) {
   const strHTML = `<h2>${proj.projName}</h2>
   <p class="item-intro text-muted">${proj.title}</p>
   <img class="img-fluid d-block mx-auto" src="img/portfolio/${proj.id}.jpg" alt="${proj.title}">
+  <button class="btn btn-success m-3" onclick="window.open('${proj.url}')">CLICK HERE TO OPEN THE PROJECT</button>
   <p>${proj.desc}</p>
   <ul class="list-inline">
-    <button onclick="window.open('${proj.url}')">CLICK HERE TO OPEN THE PROJECT</button>
-    <li>Created At: ${proj.publishedAt}</li>
+    <li>Created At: ${new Date(proj.publishedAt).toDateString()}</li>
     <li>Category: Illustration</li>
   </ul>
   <button class="btn btn-primary" data-dismiss="modal" type="button">

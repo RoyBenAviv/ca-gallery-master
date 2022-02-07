@@ -1,15 +1,15 @@
 'use strict';
 
 var gProjs;
-_createProjs()
+_createProjs();
 function _createProjs() {
     gProjs = [
-        _createProj('pacman', 'Pacman', 'Imitation of Pacman game', '/projects/pacman/index.html'),
-        _createProj('book-shop', 'Book Store', 'Book store with CRUDL', '/projects/book-shop/index.html'),
-        _createProj('minesweeper-game', 'Minesweeper Boom', 'The nostalgic Minesweeper game', '/projects/minesweeper-game/index.html'),
-        _createProj('touch-nums', 'Touch the numbers', 'Touch the numbers fast as you can', '/projects/touch-nums/index.html'),
-        _createProj('in-picture', 'What is the flag?', 'Flag Quiz', '/projects/in-picture/index.html'),
-        _createProj('ball-board', 'Catch the balls!', 'Ball Board Game', '/projects/ball-board/index.html')
+        _createProj('pacman', 'Pacman', 'Imitation of Pacman game',1643037813,'/projects/pacman/index.html'),
+        _createProj('book-shop', 'Book Store', 'Book store with CRUDL', 1643901813, '/projects/book-shop/index.html'),
+        _createProj('minesweeper-game', 'Minesweeper Boom', 'The nostalgic Minesweeper game', 1643297013, '/projects/minesweeper-game/index.html'),
+        _createProj('touch-nums', 'Touch the numbers', 'Touch the numbers fast as you can', 1642692213, '/projects/touch-nums/index.html'),
+        _createProj('in-picture', 'What is the flag?', 'Flag Quiz', 1642692213, '/projects/in-picture/index.html'),
+        _createProj('ball-board', 'Catch the balls!', 'Ball Board Game', 1642951413, '/projects/ball-board/index.html')
     ];
 }
 
@@ -18,24 +18,24 @@ function _createProjs() {
 function getProjsForDisplay() {
     var projects = gProjs;
 
-    return projects
+    return projects;
 }
 
-function _createProj(id, projName, title, url) {
+function _createProj(id, projName, title, publishedAt, url) {
     return {
         id,
         projName,
         title,
         desc: makeLorem(),
         url,
-        publishedAt: 1448693940000,
+        publishedAt,
         labels: ["Matrixes", "keyboard events"]
     };
 }
 
 function getProjById(projId) {
-    const proj = gProjs.find((proj) => projId === proj.id)
-    return proj
+    const proj = gProjs.find((proj) => projId === proj.id);
+    return proj;
 }
 
 function makeLorem(wordCount = 40) {
