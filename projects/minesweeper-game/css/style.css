@@ -1,0 +1,172 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+html {
+    height: 100%;
+    background-image: linear-gradient(to right top, #9a9ae1, #9a9ae1, #9a9ae1, #9a9ae1, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+body {
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    
+}
+
+table {
+    width: 460px;
+    height: 460px;
+    margin-top: 15px;
+    border: 1px solid #9a9ae1;
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px 5px #D16BA5;
+    table-layout: fixed;
+}
+
+.modal {
+    background-image: radial-gradient(circle, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #8aa7ec, #8aa7ec, #8aa7ec, #8aa7ec, #79b3f4, #79b3f4);
+    z-index: 1;
+    width: 400px;
+    height: 250px;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 0px 15px 5px #D16BA5;
+    border-radius: 20%;
+    opacity: 0.9;
+}
+.modal h3 {
+    margin-top: 10px;
+}
+
+.modal .win img {
+    width: 150px;
+    margin-top: 20px;
+}
+
+.modal .lose img {
+    width: 120px;
+    margin-top: 20px;
+}
+
+
+button {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 35%;
+    border: 3px solid white;
+    cursor: pointer;
+    color: white;
+    background-color: #da445d;
+    font-size: 16px;
+    font-family: 'Indie Flower', cursive; 
+    font-weight: bold;
+    letter-spacing: 3px;
+
+   }
+   
+button:hover {
+    background-color: #da445daf;
+}
+
+td {
+    background-color: #91f3ec;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    opacity: 0.9;
+    transition: 0.7s;
+    line-height: 0;
+    font-size: 40px;
+}
+
+td:hover {
+    background-color: #91f3ec7c;
+    opacity: 0.7;
+  }
+
+.bomb {
+    width: 35px;
+    height: 35px;
+}
+
+.flag {
+    width: 35px;
+    height: 35px;
+}
+
+.title {
+    width: 350px;
+    margin-top: 30px;
+    user-select: none;
+
+}
+
+.second-title {
+    margin-bottom: 20px;
+    color: #942000;
+    user-select: none;
+}
+
+.levels {
+    margin: 25px;
+    display: inline-block;
+}
+
+.mark {
+    background-color: #8afff77c;
+}
+
+
+.user > * {
+    margin: 20px 80px;
+    user-select: none;
+}
+
+.user {
+    display: flex;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+.time {
+    margin-right: 100px;
+}
+
+h3:nth-child(1) span {
+    position: fixed;
+    margin-left: 9px;
+    margin-top: 1px;
+
+}
+
+.clicked {
+    background-color: #91f3ec7c;
+}
+
+.hint {
+    background-color: gold;
+}
+
+p u {
+    cursor: pointer;
+}
+
+p u:hover {
+    color: gold
+}
