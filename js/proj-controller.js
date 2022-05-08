@@ -88,14 +88,19 @@ function renderFrontProjects() {
 function onOpenModal(projId) {
 
   var proj = getProjById(projId)
+  // const categories = proj.labels
+
+  // const categories = proj.labels.map(category => {
+    
+  // })
+
+  
   const strHTML = `<h2>${proj.projName}</h2>
   <p class="item-intro text-muted">${proj.title}</p>
   <img class="img-fluid d-block mx-auto" src="img/portfolio/${proj.id}.jpg" alt="${proj.title}">
   <button class="btn btn-success m-3" onclick="window.open('${proj.url}')">CLICK HERE TO OPEN THE PROJECT</button>
-  <p>${proj.desc}</p>
   <ul class="list-inline">
-    <li>Created At: ${new Date(proj.publishedAt).toDateString()}</li>
-    <li>Category: Illustration</li>
+    <li>Categories: ${proj.labels.join(', ')}</li>
   </ul>
   <button class="btn btn-primary" data-dismiss="modal" type="button">
     <i class="fa fa-times"></i>
