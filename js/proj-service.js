@@ -4,7 +4,7 @@ var gProjs;
 _createProjs();
 function _createProjs() {
     gProjs = [
-        _createProj('pacman', 'Pacman', 'Imitation of Pacman game',1643037813, ['Vanilla JS'], './projects/pacman/index.html'),
+        _createProj('pacman', 'Pacman', 'Imitation of Pacman game',1643047813, ['Vanilla JS'], './projects/pacman/index.html'),
         _createProj('minesweeper-game', 'Minesweeper Boom', 'The nostalgic Minesweeper game', 1643297013, ['Vanilla JS'], './projects/minesweeper-game/index.html'),
         _createProj('touch-nums', 'Touch the numbers', 'Touch the numbers fast as you can', 1642692213, ['Vanilla JS'], './projects/touch-nums/index.html'),
         _createProj('book-shop', 'Book Store', 'Basic Book store with CRUDL', 1643901813, ['Vanilla JS'], './projects/book-shop/index.html'),
