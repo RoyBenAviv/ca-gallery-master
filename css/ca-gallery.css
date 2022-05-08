@@ -780,6 +780,9 @@ fieldset[disabled] .btn-xl:hover {
     padding-left: 0;
 }
 
+.website-link {
+    font-weight: bold;
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -796,4 +799,11 @@ fieldset[disabled] .btn-xl:hover {
   ::-webkit-scrollbar-thumb {
     background: #dc3545;
     border-radius: 10px;
+  }
+
+  .fa-shopify, .fa-js-square {
+      z-index: 1000000;
+      color: white;
+      position: absolute;
+      transform: translate(-50%, 50%);
   }

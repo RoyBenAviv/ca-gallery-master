@@ -3,15 +3,16 @@
 $(init);
 
 function init() {
-  renderProjects();
+  renderGameProjects();
+  renderFrontProjects();
 }
 
 $('.submit-btn').click(onSubmitForm);
 
-function renderProjects() {
+function renderGameProjects() {
 
- const projects = getProjsForDisplay();
- const strHtmls = projects.map(proj => {
+ const gameProjects = getProjsForDisplay().slice(0,3);
+ const strHtmls = gameProjects.map(proj => {
     return `
     <div class="col-md-4 col-sm-6 portfolio-item">  
       <a class="portfolio-link" data-toggle="modal" href="#portfolioModal" onclick="onOpenModal('${proj.id}')">
@@ -29,8 +30,33 @@ function renderProjects() {
      </div>
   `;
   });
-  $('.proj-list').html(strHtmls.join(''));
+  $('.game-list').html(strHtmls.join(''));
 }
+
+function renderFrontProjects() {
+
+  const frontProjects = getProjsForDisplay().slice(3,4)
+  const strHtmls = frontProjects.map(proj => {
+     return `
+     <div class="col-md-4 col-sm-6 portfolio-item">  
+       <a class="portfolio-link" data-toggle="modal" href="#portfolioModal" onclick="onOpenModal('${proj.id}')">
+         <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+          </div>
+         </div>
+           <img class="img-fluid img-proj" src="img/portfolio/${proj.id}.jpg" alt="${proj.title}">
+        </a>
+       <div class="portfolio-caption">
+         <h4 class="text-light">${proj.projName}</h4>
+         <p class="text-light">${proj.title}</p>
+       </div>
+      </div>
+   `;
+   });
+   $('.front-list').html(strHtmls.join(''));
+ }
+
 
 
 function onOpenModal(projId) {

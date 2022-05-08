@@ -4,12 +4,10 @@ var gProjs;
 _createProjs();
 function _createProjs() {
     gProjs = [
-        _createProj('pacman', 'Pacman', 'Imitation of Pacman game',1643037813,'./projects/pacman/index.html'),
-        _createProj('book-shop', 'Book Store', 'Book store with CRUDL', 1643901813, './projects/book-shop/index.html'),
-        _createProj('minesweeper-game', 'Minesweeper Boom', 'The nostalgic Minesweeper game', 1643297013, './projects/minesweeper-game/index.html'),
-        _createProj('touch-nums', 'Touch the numbers', 'Touch the numbers fast as you can', 1642692213, './projects/touch-nums/index.html'),
-        _createProj('in-picture', 'What is the flag?', 'Flag Quiz', 1642692213, './projects/in-picture/index.html'),
-        _createProj('ball-board', 'Catch the balls!', 'Ball Board Game', 1642951413, './projects/ball-board/index.html')
+        _createProj('pacman', 'Pacman', 'Imitation of Pacman game',1643037813, ['Vanilla JS'], './projects/pacman/index.html'),
+        _createProj('minesweeper-game', 'Minesweeper Boom', 'The nostalgic Minesweeper game', 1643297013, ['Vanilla JS'], './projects/minesweeper-game/index.html'),
+        _createProj('touch-nums', 'Touch the numbers', 'Touch the numbers fast as you can', 1642692213, ['Vanilla JS'], './projects/touch-nums/index.html'),
+        _createProj('book-shop', 'Book Store', 'Basic Book store with CRUDL', 1643901813, ['Vanilla JS'], './projects/book-shop/index.html'),
     ];
 }
 
@@ -21,15 +19,15 @@ function getProjsForDisplay() {
     return projects;
 }
 
-function _createProj(id, projName, title, publishedAt, url) {
+function _createProj(id, projName, title, publishedAt, labels, url) {
     return {
         id,
         projName,
         title,
         desc: makeLorem(),
-        url,
         publishedAt,
-        labels: ["Matrixes", "keyboard events"]
+        labels,
+        url
     };
 }
 
