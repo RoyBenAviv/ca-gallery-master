@@ -1,0 +1,83 @@
+.nav-container {
+    width: 100%;
+    background-color: black;
+}
+
+.nav-container .nav-content .nav-options {
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-options.nav-canvas li:last-child {
+    width: 110px;
+}
+
+.nav-container .nav-content .nav-options > li {
+    color: wheat;
+    cursor: pointer;
+    text-decoration: overline;
+}
+
+.nav-container .nav-content .nav-options > li:hover {
+    color:#a3242b;
+}
+
+.nav-container .nav-content .nav-options > li #category-img {
+    border: none;
+    background-color: transparent;
+    color: #a3242b;
+    font-family: kid;
+    font-size: 1rem;
+}
+
+.nav-container .nav-content .nav-options > li #category-img::placeholder {
+    color: wheat;
+    cursor: pointer;
+    text-decoration: overline;
+    font-family: kid;
+    width: 100%;
+}
+
+.nav-button {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    z-index: 1;
+    top: 92px;
+}
+
+.nav-button i {
+    font-size: 1.9rem;
+}
+
+.nav-options li {
+    position: relative;
+}
+
+.nav-options .upload-image {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.drake1, .drake2, .girl, .exit, .peepo3d, .doge {
+    cursor: pointer;
+    position: absolute;
+    width: 60px;
+    left: 50%;
+    bottom: 100%;
+    transform: translate(-50%);
+}
+
+.girl {
+    width: 90px;
+    left: 40%;
+    bottom: 115%;
+}
+
+.exit, .peepo3d, .doge {
+    bottom: 115%;
+}
+

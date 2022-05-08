@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <link rel="stylesheet" href="styles/style.css" />
+        <script src="https://kit.fontawesome.com/17c6f1b0f0.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meme Generator</title>
+        <link rel="shortcut icon" type="image/jpg" href="images/other/favicon.svg" />
+    </head>
+    
+    <body onload="init()">
+        <img class="canvas-bg" src="images/other/background.png">
+        <div class="user-msg"></div>
+        <header>
+            <div class="header-container flex align-center">
+            <div onclick="onBack()" class="logo flex align-center">
+                <img src="images/other/logo.png">
+                <div class="logo-text flex column align-center">
+                    <h2>M<span>e</span>m<span>e</span> G<span>e</span>n<span>e</span>r<span>a</span>t<span>o</span>r
+                    </h2>
+                    <h5>Style your meme and show to your friends!</h5>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="nav-container flex align-end">
+        <div class="nav-content main-layout flex align-center">
+            <ul class="nav-options nav-gallery clean-list flex">
+                <li onclick="onRandomMeme()">Feeling Flexible
+                    <img class="drake1" src="images/other/drake1.png">
+                </li>
+
+                <li onclick="openMyMemes()">My Memes
+                    <img class="girl" src="images/other/girl.png">
+                </li>
+
+                <li>Upload Image
+                    <label for="upload-image"><img class="doge" src="images/other/doge.png"></label>
+                    <input id="upload-image" class="upload-image" type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
+                </li>
+                <li>
+                    <label for="category-img"><img class="drake2" src="images/other/drake2.png"></label>
+                    <input oninput="onSearchGenre(value)" list="categories" name="category" id="category-img"
+                        placeholder="Choose Genre">
+                    <datalist id="categories">
+                        <option value="Politics">
+                        <option value="Animals">
+                        <option value="Babys">
+                        <option value="TV">
+                        <option value="Movies">
+                    </datalist>
+                </li>
+            </ul>
+            <ul class="nav-options nav-canvas nav-gallery clean-list" hidden>
+                <li onclick="onBack()">Go Back
+                    <img class="exit" src="images/other/exit.png">
+                </li>
+                <li onclick="toggle3d()">3D MODE: <span class="switch">OFF</span>
+                    <img class="peepo3d" src="images/other/3d.png">
+                </li>
+            </ul>
+            <ul class="nav-options nav-my-memes nav-gallery clean-list" hidden>
+                <li onclick="onBack()">Go Back
+                    <img class="exit" src="images/other/exit.png">
+                </li>
+            </ul>
+            <span onclick="toggleNav()" class="nav-button"><i class="fa-solid fa-bars"></i></span>
+        </nav>
+
+    </div>
+    
+    <section class="gallery flex column justify-center align-center">
+        <div class="gallery-images main-layout flex wrap justify-center"></div>
+
+    </section>
+
+    <section class="editor" hidden>
+        <div class="canvas-container main-layout flex">
+
+            <canvas id="my-canvas" height="450" width="450"></canvas>
+
+            <div class="user-editor flex column">
+
+                <div class="user-options">
+                    <input type="text" name="meme-text" placeholder="Add some text" oninput="onSetText(this)" />
+                    <button class="add" title="add line" onclick="onAddLine()"><i class="fa-solid fa-plus"></i></button>
+                    <button class="delete" title="delete line" onclick="onDeleteLine()"><i
+                            class="fa-solid fa-trash-can"></i></button>
+                    <select class="font-select" onchange="onSetFont(this.value)">
+                        <option value="IMPACT">Impact</option>
+                        <option value="ARIAL">Arial</option>
+                        <option value="GEORGIA">Georgia</option>
+                    </select>
+                    <div title="font size" class="range-container">
+                        <input type="range" name="font-size" min="25" max="99" value="50"
+                            oninput="onSetSize(this.value)" />
+                        <span>font size: <span id="font-size">50</span></span>
+                    </div>
+
+                    <button class="switch-line" title="switch line" onclick="onSwitchLine()"><img
+                            src="./images/other/switch.png"></button>
+                    <button class="stroke" title="stroke text" onclick="onStrokeTxt()"><img
+                            src="./images/other/text-stroke.png"></button>
+                        <button class="color"><i class="fa-solid fa-paintbrush">
+                            <input title="change color" type="color" name="color" value="#ffffff"
+                            oninput="onSetColor(this)" />
+                        </i></button>
+
+                    <button class="left" title="align left" onclick="onAlign('left')"><i
+                            class="fa-solid fa-align-left"></i></button>
+                    <button class="center" title="align center" onclick="onAlign('center')"><i
+                            class="fa-solid fa-align-justify"></i></button>
+                    <button class="right" title="align right" onclick="onAlign('right')"><i
+                            class="fa-solid fa-align-right"></i></button>
+                    <button class="save" onclick="onSave()" title="save meme">
+                        <i class="fa-solid fa-floppy-disk"></i></button>
+
+
+                        <button class="share-api" title="share meme" onclick="shareAPI()"><i class="fa-solid fa-share-nodes"></i></button>
+                        
+                    <button class="download"><a title="download meme" onclick="onDownload(this)"
+                            download="my-meme.jpg"><i class="fa-solid fa-download"></i></a></button>
+                    <button title="share on facebook" onclick="uploadImg()" class="share"><i
+                            class="fa-solid fa-share"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="memes-section" hidden>
+        <div class="main-layout my-memes-gallery flex">
+        </div>
+    </section>
+
+    <script src="js/storage.service.js"></script>
+    <script src="js/meme.utils.js"></script>
+    <script src="js/upload-service.js"></script>
+    <script src="js/meme.controller.js"></script>
+    <script src="js/meme.service.js"></script>
+    <script src="js/meme.events.service.js"></script>
+    <script src="js/gallery.controller.js"></script>
+    <script src="js/my-memes.controller.js"></script>
+</body>
+
+</html>

@@ -5,6 +5,7 @@ $(init);
 function init() {
   renderGameProjects();
   renderFrontProjects();
+  renderEndToEndProjects();
 }
 
 $('.submit-btn').click(onSubmitForm);
@@ -35,7 +36,7 @@ function renderGameProjects() {
 
 function renderFrontProjects() {
 
-  const frontProjects = getProjsForDisplay().slice(3,4)
+  const frontProjects = getProjsForDisplay().slice(3,6)
   const strHtmls = frontProjects.map(proj => {
      return `
      <div class="col-md-4 col-sm-6 portfolio-item">  
@@ -56,6 +57,31 @@ function renderFrontProjects() {
    });
    $('.front-list').html(strHtmls.join(''));
  }
+
+ function renderEndToEndProjects() {
+
+  const endToEndProjects = getProjsForDisplay().slice(6,9)
+  const strHtmls = endToEndProjects.map(proj => {
+     return `
+     <div class="col-md-4 col-sm-6 portfolio-item">  
+       <a class="portfolio-link" data-toggle="modal" href="#portfolioModal" onclick="onOpenModal('${proj.id}')">
+         <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+          </div>
+         </div>
+           <img class="img-fluid img-proj" src="img/portfolio/${proj.id}.jpg" alt="${proj.title}">
+        </a>
+       <div class="portfolio-caption">
+         <h4 class="text-light">${proj.projName}</h4>
+         <p class="text-light">${proj.title}</p>
+       </div>
+      </div>
+   `;
+   });
+   $('.end-to-end-list').html(strHtmls.join(''));
+ }
+
 
 
 

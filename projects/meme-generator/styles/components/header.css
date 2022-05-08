@@ -1,0 +1,31 @@
+header {
+    border-bottom: 5px solid wheat;
+    background-image: linear-gradient(to right top, #b30000, #b30000, #b30000, #b30000, #b30000, #b92c05, #bf4310, #c4561c, #d07b3a, #dc9e5e, #e8be87, #f5deb3);
+}
+
+.header-container {
+    height: 100%;
+}
+
+header .header-container .logo {
+    cursor: pointer;
+}
+
+header .header-container .logo .logo-text > * {
+    margin: 0;
+}
+
+header .header-container .logo .logo-text h5 {
+    font-size: 1em;
+}
+
+header .header-container .logo h2 {
+    font-family: mouse;
+    color: whitesmoke;
+    padding-inline-start: 1.25rem;
+    letter-spacing: 0.35rem;
+}
+
+header .header-container .logo h2 span {
+    color: wheat;
+}

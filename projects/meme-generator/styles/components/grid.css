@@ -1,0 +1,123 @@
+.editor .user-options {
+    display: grid;
+    width: min-content;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 15px;
+    grid-template-areas: 
+    "input input plus switch"
+    "font size color stroke"
+    "delete left center right"
+    ". . . ."
+    "share-api save download share";
+}
+
+@media (min-width: 900px) {
+    .share-api {
+        left: 100px;
+    }
+}
+
+@media (max-width: 900px) {
+    .editor .user-options {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "input input plus switch"
+        "font size color stroke"
+        "delete left center right"
+        "share-api save download share";
+    }
+}
+
+@media (max-width: 490px) {
+    .editor .user-options {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 10px;
+        grid-template-areas: 
+        "input input input plus"
+        "font color stroke switch"
+        "size left center right"
+        "delete save download share";
+        justify-items: left;
+    }
+
+    .editor .user-editor input:first-child {
+        justify-self: left;
+    }
+    
+    .left {
+        justify-self: center;
+    }
+
+    .share-api {
+        display: none;
+    }
+}
+
+.editor .user-editor input:first-child {
+    grid-area: input;
+}
+
+.add {
+    grid-area: plus;
+}
+
+.delete {
+    grid-area: delete;
+}
+
+.switch-line {
+    grid-area: switch;
+}
+
+.stroke {
+    grid-area: stroke;
+}
+
+.font-select {
+    grid-area: font;
+}
+
+.range-container {
+    grid-area: size;
+}
+
+.share-api {
+    grid-area: share-api;
+    justify-self: start;
+    position: relative;
+    
+}
+
+.left {
+    grid-area: left;
+    justify-self: end;
+}
+
+.center {
+    grid-area: center;
+}
+
+.right {
+    grid-area: right;
+}
+
+.color {
+    grid-area: color;
+}
+
+.editor .user-editor .save {
+    grid-area: save;
+    justify-self: end;
+}
+
+.editor .user-editor .download {
+    grid-area: download;
+}
+.editor .user-editor .share {
+    grid-area: share;
+}
+

@@ -1,0 +1,53 @@
+.gallery h1 {
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 0.55rem;
+}
+
+.gallery .gallery-images {
+    
+    padding: 30px;
+    height: 500px;
+    gap: 40px;
+}
+
+.meme-img {
+    cursor: pointer;
+}
+
+.meme-img {
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.gallery .gallery-images .img-container {
+    position: relative;
+    height: max-content;
+    cursor: pointer;
+}
+
+.gallery .gallery-images .genre {
+    position: absolute;
+    background: #333;
+    opacity: 0;
+    width: 100%;
+    bottom: -5%;
+    height: 50px;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    padding-block-start: 0.875em;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transition: opacity 0.5s;
+}
+
+.meme-img:hover, .genre {
+    transform: scale(1.2);
+    box-shadow: 0px -4px 24px 5px #000000;
+}
+
+.gallery .gallery-images img:hover ~ .genre  {
+    opacity: 0.9;
+}
+

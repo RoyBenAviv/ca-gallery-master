@@ -88,6 +88,7 @@ body {
     margin-right: 80vw;
 }
 .offcanvas-aside {
+    z-index: 10;
     position: fixed;
     height: 100%;
     background: #ff4053;
@@ -802,7 +803,6 @@ fieldset[disabled] .btn-xl:hover {
   }
 
   .fa-shopify, .fa-js-square {
-      z-index: 1000000;
       color: white;
       position: absolute;
       transform: translate(-50%, 50%);
