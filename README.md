@@ -1,12 +1,4 @@
-# [Cosing Academy - Base Gallery]
-A responsive portfolio grid to be used by Coding Academy students
-
-
-## Usage
-
-### Basic Usage
-
-After downloading, simply edit the HTML, CSS and JS files included with the template to Make-it-Yours.
+Roy Ben Aviv Portfolio - about me and recent projects.
 
 
 ## Copyright and License
