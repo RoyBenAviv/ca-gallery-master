@@ -12,7 +12,7 @@ function _createProjs() {
         _createProj('mr-btc', 'Mister BTC', 'Bitcoin app - trade & charts', 1643901813, ['React.js'], 'https://roybenaviv.github.io/mister-bitcoin/#/signup'),
         _createProj('trellox', 'TRELLOX', 'Task management app - Trello clone', 1643901813, ['Vue.js', 'Vuex', 'Node.js', 'MongoDB'], 'https://trelloxx.herokuapp.com/#/'),
         _createProj('mr-eth', 'MR. ETH', 'Crypto application', 1643901813, ['Angular', 'RxJS', 'Node.js', 'MongoDB'], 'https://mr-eth.herokuapp.com/#/signup'),
-        _createProj('roy-toy', 'Roy Toy', 'Toy store', 1643901813, ['Vue.js', 'Vuex', 'Node.js', 'MongoDB'], 'https://fierce-meadow-49839.herokuapp.com/#/'),
+        _createProj('netflix', 'Netflix', 'Netflix clone', 1643901813, ['React.js', 'Firebase'], 'https://roybenaviv.github.io/netclone/#/'),
 
     ];
 }
