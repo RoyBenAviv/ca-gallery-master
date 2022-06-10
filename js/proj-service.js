@@ -17,12 +17,10 @@ function _createProjs() {
     ];
 }
 
-// `<button onclick ="window.open(${proj.url})`
-
 function getProjsForDisplay() {
     var projects = gProjs;
 
-    return projects;
+    return projects
 }
 
 function _createProj(id, projName, title, publishedAt, labels, url) {
