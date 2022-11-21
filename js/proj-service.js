@@ -10,8 +10,8 @@ function _createProjs() {
         _createProj('book-shop', 'Book Store', 'Basic Book store with CRUDL', 1643901813, ['Vanilla JS'], './projects/book-shop/index.html'),
         _createProj('meme-generator', 'Meme Generator', 'customize and share your meme', 1643901813, ['Vanilla JS'], './projects/meme-generator/index.html'),
         _createProj('mr-btc', 'Mister BTC', 'Bitcoin app - trade & charts', 1643901813, ['React.js'], 'https://roybenaviv.github.io/mister-bitcoin/#/signup'),
-        _createProj('trellox', 'TRELLOX', 'Task management app - Trello clone', 1643901813, ['Vue.js', 'Vuex', 'Node.js', 'MongoDB'], 'https://trelloxx.herokuapp.com/#/'),
-        _createProj('mr-eth', 'MR. ETH', 'Crypto application', 1643901813, ['Angular', 'RxJS', 'Node.js', 'MongoDB'], 'https://mr-eth.herokuapp.com/#/signup'),
+        _createProj('trellox', 'TRELLOX', 'Task management app - Trello clone', 1643901813, ['Vue.js', 'Vuex', 'Node.js', 'MongoDB'], 'https://trellox-production.up.railway.app/#/'),
+        _createProj('mr-eth', 'MR. ETH', 'Crypto application', 1643901813, ['Angular', 'RxJS', 'Node.js', 'MongoDB'], 'https://mreth-production.up.railway.app/#/'),
         _createProj('netflix', 'Netflix', 'Netflix clone', 1643901813, ['React.js', 'Firebase'], 'https://roybenaviv.github.io/netclone/#/'),
 
     ];
