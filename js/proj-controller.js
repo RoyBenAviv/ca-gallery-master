@@ -101,10 +101,7 @@ function onOpenModal(projId) {
   <button class="btn btn-success m-3" onclick="window.open('${proj.url}')">OPEN PROJECT</button>
   <ul class="list-inline">
     <li>Categories: ${proj.labels.join(', ')}</li>
-  </ul>
-  <button class="btn btn-primary" data-dismiss="modal" type="button">
-    <i class="fa fa-times"></i>
-    Close Project</button>`
+  </ul>`
 
     $('.proj-modal').html(strHTML)
 }
