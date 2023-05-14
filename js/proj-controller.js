@@ -98,7 +98,7 @@ function onOpenModal(projId) {
   const strHTML = `<h2>${proj.projName}</h2>
   <p class="item-intro text-muted">${proj.title}</p>
   <img class="img-fluid d-block mx-auto" src="img/portfolio/${proj.id}.jpg" alt="${proj.title}">
-  <button class="btn btn-success m-3" onclick="window.open('${proj.url}')">CLICK HERE TO OPEN THE PROJECT</button>
+  <button class="btn btn-success m-3" onclick="window.open('${proj.url}')">OPEN PROJECT</button>
   <ul class="list-inline">
     <li>Categories: ${proj.labels.join(', ')}</li>
   </ul>
